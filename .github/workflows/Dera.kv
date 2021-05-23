@@ -1,0 +1,2022 @@
+WindowManager:
+    #transition: FadeTransition()
+    LoadingScreen:
+    MenuScreen:
+    EighteenThings:
+    BirthdayCard:
+    Ilay1:
+    Ilay2:
+    Ilay3:
+    Ilay4:
+    Ilay5:
+    Ilay6:
+    Ilay7:
+    Ilay8:
+    Ilay9:
+    Ilay10:
+    Ilay11:
+    Ilay12:
+    Ilay13:
+    Ilay14:
+    Ilay15:
+    Ilay16:
+    Ilay17:
+    Ilay18:
+    Iwytk1:
+    Iwytk2:
+    Iwytk3:
+    Iwytk4:
+    Iwytk5:
+    Iwytk6:
+    Iwytk7:
+    Iwytk8:
+    Iwytk9:
+    Iwytk10:
+    Iwytk11:
+    Iwytk12:
+    Iwytk13:
+    Iwytk14:
+    Iwytk15:
+    Iwytk16:
+    Iwytk17:
+    Iwytk18:
+
+<LoadingScreen>:
+    name: "load"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "loadback.jpg"
+
+    ProgressBar:
+        size: "5dp","5dp"
+        pos_hint: {'x':0, 'y':-0.45}
+        id: pb
+        min: 1
+        max: 5
+        value: 1
+
+<EighteenThings>:
+    name: "18_t"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "18things.jpg"
+
+    AnchorLayout:
+        center: root.center
+        anchor_x : "center"
+        anchor_y : "center"
+        size: "40dp", "20dp"
+        size_hint: "0.6","0.2"
+        BoxLayout:
+            orientation : "vertical"
+            spacing: "5dp"
+            Button:
+                text: "...I love about you."
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    app.root.current = "il1"
+                    root.manager.transition.direction = "left"
+            Button:
+                text: "...I want You to know."
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    app.root.current = "iw1"
+                    root.manager.transition.direction = "left"
+
+            Button:
+                text:"back to menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+<BirthdayCard>:
+    name: "bc"
+    padding: [20,20,20,20]
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "bcback.jpg"
+
+    Label:
+        size_hint: "1","1"
+        color: (102/255,51/255,153/255,1)
+        font_size: 20
+        text: "Hey, firstly i want to wish you a very happy birthday.\nI wanted you to know how important you are to \npeople thats why i took time making this card\nor app whatever you wanna call it. \nI also wanted to make a promise that \nno matter how long and how far\nI will always want you to be my little lady,\ncuz you've really changed me in the short time we've been friends,\neven though you might not agree.\nAnyways,\nhappy 18th birthday little lady\nsincerely,\nyour weird friend."
+    Button:
+        size_hint: "0.2","0.1"
+        pos_hint: {'x':0.8}
+        background_color: (102/255,51/255,153/255,0.5)
+        color: (255/255,215/255,0,1)
+        text:"back"
+        on_release:
+            app.root.current = "menu"
+            root.manager.transition.direction = "right"
+
+<MenuScreen>:
+    name: "menu"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "menuback.jpg"
+
+    AnchorLayout:
+        center: root.center
+        anchor_x : "center"
+        anchor_y : "center"
+        size: "40dp", "20dp"
+        size_hint: "0.6","0.2"
+        BoxLayout:
+            orientation : "vertical"
+            spacing: "5dp"
+            Button:
+                text: "18 things..."
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    app.root.current = "18_t"
+                    root.manager.transition.direction = "left"
+            Button:
+                text: "Birthday card"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    app.root.current = "bc"
+                    root.manager.transition.direction = "left"
+
+            Button:
+                text: "Quit"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                on_release:
+                    root.close()
+<Ilay1>:
+    name: "il1"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "1"
+                color: (255/255,215/255,0,1)
+                size_hint: ".7","1"
+
+        Label:
+            color: (255/255,215/255,0,1)
+            text: "You\n are \n smart."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "back"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "18_t"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il2"
+                    root.manager.transition.direction = "left"
+
+<Ilay2>:
+    name: "il2"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "2"
+                color: (255/255,215/255,0,1)
+                size_hint: ".7","1"
+
+        Label:
+            text: "You\n are \nsexy."
+            color: (255/255,215/255,0,1)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il1"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il3"
+                    root.manager.transition.direction = "left"
+
+<Ilay3>:
+    name: "il3"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "3"
+                color: (255/255,215/255,0,1)
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're\n so adorably\n cute."
+            color: (255/255,215/255,0,1)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il2"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il4"
+                    root.manager.transition.direction = "left"
+
+<Ilay4>:
+    name: "il4"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "4"
+                color: (255/255,215/255,0,1)
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're\n so \nfunny."
+            color: (255/255,215/255,0,1)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il3"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il5"
+                    root.manager.transition.direction = "left"
+
+<Ilay5>:
+    name: "il5"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "5"
+                color: (255/255,215/255,0,1)
+                size_hint: ".7","1"
+
+        Label:
+            color: (255/255,215/255,0,1)
+            text: "You're\n really \nfocused."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il4"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il6"
+                    root.manager.transition.direction = "left"
+
+<Ilay6>:
+    name: "il6"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "6"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "You\n still \n stick with me.\nEven though I'm not really okay."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il5"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il7"
+                    root.manager.transition.direction = "left"
+
+<Ilay7>:
+    name: "il7"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "7"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "You're\n calm \nand collected."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il6"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il8"
+                    root.manager.transition.direction = "left"
+
+<Ilay8>:
+    name: "il8"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "8"
+                size_hint: ".7","1"
+
+        Label:
+            background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n short and stubby \nfingers and toes"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il7"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il9"
+                    root.manager.transition.direction = "left"
+
+<Ilay9>:
+    name: "il9"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "9"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n big sexy eyes."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il8"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il10"
+                    root.manager.transition.direction = "left"
+
+<Ilay10>:
+    name: "il10"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "10"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n slightly \nfreckled face."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il9"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il11"
+                    root.manager.transition.direction = "left"
+
+<Ilay11>:
+    name: "il11"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "11"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n big beautiful \nsmile"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il10"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il12"
+                    root.manager.transition.direction = "left"
+
+<Ilay12>:
+    name: "il12"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "12"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n hardworking \nnature"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il11"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il13"
+                    root.manager.transition.direction = "left"
+
+<Ilay13>:
+    name: "il13"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "13"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n matter-of-fact \nattitude."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il12"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il14"
+                    root.manager.transition.direction = "left"
+
+<Ilay14>:
+    name: "il14"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "14"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n fashion sense."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il13"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il15"
+                    root.manager.transition.direction = "left"
+
+<Ilay15>:
+    name: "il15"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "15"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Your\n creativity."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il14"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il16"
+                    root.manager.transition.direction = "left"
+
+<Ilay16>:
+    name: "il16"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "16"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "The way \nyou stick up for \nthe friends you have."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il15"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il17"
+                    root.manager.transition.direction = "left"
+
+<Ilay17>:
+    name: "il17"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "17"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "The fact that \nyou're so hot \nI get turned on \njust by remembering your name."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il16"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il18"
+                    root.manager.transition.direction = "left"
+
+<Ilay18>:
+    name: "il18"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                #background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "18"
+                size_hint: ".7","1"
+
+        Label:
+            #background_color: (102/255,51/255,153/255,0.5)
+            color: (255/255,215/255,0,1)
+            text: "Everything \nelse about you \nthat i didn't mention."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "il17"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                background_color: (102/255,51/255,153/255,0.5)
+                color: (255/255,215/255,0,1)
+                text: "back"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "18_t"
+                    root.manager.transition.direction = "right"
+
+<Iwytk1>:
+    name: "iw1"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "1"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're\n beautiful \n no matter what."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "back"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "18_t"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw2"
+                    root.manager.transition.direction = "left"
+
+<Iwytk2>:
+    name: "iw2"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "2"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I'll always \nbe there for you."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw1"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw3"
+                    root.manager.transition.direction = "left"
+
+<Iwytk3>:
+    name: "iw3"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "3"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You can \ncall on me anytime"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw2"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw4"
+                    root.manager.transition.direction = "left"
+
+<Iwytk4>:
+    name: "iw4"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "4"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I think \nabout you everyday"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw3"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw5"
+                    root.manager.transition.direction = "left"
+
+<Iwytk5>:
+    name: "iw5"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "5"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I always \nwant you to be \nhappy"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw4"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw6"
+                    root.manager.transition.direction = "left"
+
+<Iwytk6>:
+    name: "iw6"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "6"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're \nimperfections are prefect"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw5"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw7"
+                    root.manager.transition.direction = "left"
+
+<Iwytk7>:
+    name: "iw7"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "7"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're\n blessed beyond \ncompare"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw6"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw8"
+                    root.manager.transition.direction = "left"
+
+<Iwytk8>:
+    name: "iw8"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "8"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You\n deserve to be \nhappy"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw7"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw9"
+                    root.manager.transition.direction = "left"
+
+<Iwytk9>:
+    name: "iw9"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "9"
+                size_hint: ".7","1"
+
+        Label:
+            text: "Your\n smile makes me \nsmile."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw8"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw10"
+                    root.manager.transition.direction = "left"
+
+<Iwytk10>:
+    name: "iw10"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "10"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I wanna spend \nevery second of every day \nwith you"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw9"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw11"
+                    root.manager.transition.direction = "left"
+
+<Iwytk11>:
+    name: "iw11"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "11"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I wanna know \neverything about you."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw10"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw12"
+                    root.manager.transition.direction = "left"
+
+<Iwytk12>:
+    name: "iw12"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "12"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You make \neveryone that cares \nabout you happy."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw11"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw13"
+                    root.manager.transition.direction = "left"
+
+<Iwytk13>:
+    name: "iw13"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "13"
+                size_hint: ".7","1"
+
+        Label:
+            text: "I'm happy \ni got to talk to you."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw12"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw14"
+                    root.manager.transition.direction = "left"
+
+<Iwytk14>:
+    name: "iw14"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "14"
+                size_hint: ".7","1"
+
+        Label:
+            text: "You're\n my \nlittle lady"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw13"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw15"
+                    root.manager.transition.direction = "left"
+
+<Iwytk15>:
+    name: "iw15"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "15"
+                size_hint: ".7","1"
+
+        Label:
+            text: "iono, \nI think i love you."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw14"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw16"
+                    root.manager.transition.direction = "left"
+
+<Iwytk16>:
+    name: "iw16"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "16"
+                size_hint: ".7","1"
+
+        Label:
+            text: "And, i hope you somewhat love me too."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw15"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw17"
+                    root.manager.transition.direction = "left"
+
+<Iwytk17>:
+    name: "iw17"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "17"
+                size_hint: ".7","1"
+
+        Label:
+            text: "Happy birthday Dera!!"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw6"
+                    root.manager.transitiown.direction = "right"
+
+            Button:
+                text: "next"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw18"
+                    root.manager.transition.direction = "left"
+
+<Iwytk18>:
+    name: "iw18"
+
+    BoxLayout:
+        orientation:"vertical"
+
+        spacing: "25dp"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.1"
+            spacing: "5dp"
+
+            Button:
+                text: "Menu"
+                size_hint: ".3","1"
+                on_release:
+                    app.root.current = "menu"
+                    root.manager.transition.direction = "right"
+
+            Label:
+                text: "18"
+                size_hint: ".7","1"
+
+        Label:
+            text: "Enjoy Today."
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint:"1","0.3"
+            padding: [10,0,10,10]
+            spacing: "20dp"
+
+            Button:
+                text: "previous"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "iw17"
+                    root.manager.transition.direction = "right"
+
+            Button:
+                text: "back"
+                size_hint: ".5","1"
+                on_release:
+                    app.root.current = "18_t"
+                    root.manager.transition.direction = "right"
